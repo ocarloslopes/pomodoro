@@ -20,7 +20,7 @@ const theme = createMuiTheme({
 });
 
 function App() {
-    const [totalTime, setTotalTime] = useState(3);
+    const [totalTime, setTotalTime] = useState(1500);
     const [running, setRunning] = useState(false);
     const [time, setTime] = useState(totalTime);
     const [percentage, setPercentage] = useState(0);
