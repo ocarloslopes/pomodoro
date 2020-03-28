@@ -1,0 +1,50 @@
+import React from 'react';
+
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import Button from '@material-ui/core/Button';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import 'react-circular-progressbar/dist/styles.css';
+
+import './assets/css/main.css';
+import tomato from './assets/images/tomato.png';
+  
+const theme = createMuiTheme({
+    palette: {
+      primary: {
+          main: '#64908A',
+      },
+      secondary: {
+        main: '#CC2A41',
+      },
+    },
+  });
+
+function App() {
+	const percentage=30;
+	return (
+		<div className="main">
+            <h1>Tomato Timer</h1>
+			<div className="progress">
+				<CircularProgressbar 
+					value={percentage} 
+					text='' 
+					styles={buildStyles({
+						pathColor: '#64908A',
+						trailColor: '#424254'
+					})}/>
+				<img src={tomato} className="tomato" alt="tomato" />
+			</div>
+            <h3>Focus time</h3>
+            <span className="counter">00:25:00</span>
+            <div className="test">
+                <ThemeProvider theme={theme}>
+                    <Button variant="contained" color="primary">Start</Button>
+                    <Button style={{margin: '0 10px'}} variant="contained" color="secondary">Stop</Button>
+                    <Button variant="contained" color="default">Reset</Button>
+                </ThemeProvider>
+            </div>
+		</div>
+	);
+}
+
+export default App;

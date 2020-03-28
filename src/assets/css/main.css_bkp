@@ -1,0 +1,51 @@
+body {
+    background: #10263B;
+}
+.main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.main h1 {
+    color: #E8CAA4;
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    font-weight: 400;
+    text-align: center;
+}
+.main h3 {
+    color: #E8CAA4;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.8em;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.8em 0 0 0;
+}
+.progress {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.progress .tomato {
+    position: absolute;
+    width: 140px;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.counter {
+    display: block;
+    color: #64908A;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 3.5em;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.3em 0;
+}
+.test {
+    max-width: 240px;
+    margin: auto;
+}
+
